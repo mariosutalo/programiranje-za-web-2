@@ -1,0 +1,4 @@
+Metoda - funkcija koja se nalazi u objektu
+svaki html element je javascript objekt
+
+
