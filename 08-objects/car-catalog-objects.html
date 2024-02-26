@@ -7,7 +7,9 @@
 </head>
 <body>
     <script>
-        const car1 = {brand: 'Opel', model: 'Astra', price: 10000, power: 130}
+        const car1 = {brand: 'Opel', model: 'Astra', price: 10000, power: 130, printBrand: function() {
+            console.log(this.brand)
+        }}
         const car2 = {brand: 'Bmw', model: '3', price: 20000, power: 140}
         const car3 = {brand: 'Alfa Romeo', model: 'Giulia', price: 30000, power: 180}
 
@@ -25,6 +27,7 @@
         }
 
         totalCarPrice(car1, car2, car3)
+        car1.printBrand()
 
     </script>
 </body>
