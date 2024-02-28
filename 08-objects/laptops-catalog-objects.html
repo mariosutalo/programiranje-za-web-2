@@ -7,7 +7,11 @@
 </head>
 <body>
     <script>
-        const model1 = {name: 'Hp g1', price: 1000, ram: '8gb' }
+        const model1 = {name: 'Hp g1', price: 1000, ram: '8gb',
+        getLaptopPrice: function () {
+            console.log('Hello from function')
+        }
+    }
         const model2 = {name: 'Hp Lenovo', price: 1100, ram: '16gb' }
         const model3 = {name: 'Asus ROG', price: 1500, ram: '32gb' }
         const model4 = {name: 'Asus ROG', price: 1500, ram: '32gb' }
@@ -18,6 +22,7 @@
         }
 
         printDetails(model1)
+        model1.getLaptopPrice()
         printDetails(model2)
         printDetails(model3)
         printDetails(model4)
