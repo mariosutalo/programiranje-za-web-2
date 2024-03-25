@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" placeholder="Enter your name">
+    <input type="text" placeholder="Enter your name" onkeyup="displayInputTextOnKeyChange(event)">
     <button onclick="displayInputText()">Submit</button>
     <p></p>
     <script>
@@ -16,6 +16,14 @@
             let p = document.querySelector('p')
             p.innerHTML = value
         }
+
+        function displayInputTextOnKeyChange(keyEvent) {
+            if(keyEvent.key === 'Enter') {
+                displayInputText()
+            }
+            
+        }
+
 
         function doNothing() {
 
