@@ -1,35 +1,16 @@
-let selectedButton = ''
-function onPhoneClicked(phoneName) {
-    const btn = document.querySelector(`.${phoneName}`)
-    if (btn.classList.contains('filter-btn-clicked') === false) {
-        if (selectedButton !== '') {
-            const oldBtn = document.querySelector(`.${selectedButton}`)
-            oldBtn.classList.remove('filter-btn-clicked')
-        }
-function onIphoneClicked() {
-    const btn = document.querySelector('.iphone-btn')
-    if (btn.classList.contains('filter-btn-clicked') === false ) {
-        btn.classList.add('filter-btn-clicked')
-    } else {
-        btn.classList.remove('filter-btn-clicked')
-    }
-}
 
-function onSamsungClicked() {
-    const btn = document.querySelector('.samsung-btn')
-    if (btn.classList.contains('filter-btn-clicked') === false) {
-        btn.classList.add('filter-btn-clicked')
-        selectedButton = phoneName
-    } else {
-        btn.classList.remove('filter-btn-clicked')
+let brandSelected = ''
+function onPhoneClicked(brandName) {
+    let btn = document.querySelector(`.${brandName}`)
+    if (brandSelected !== '') {
+        let oldSelectedBtn = document.querySelector(`.${brandSelected}`)
+        oldSelectedBtn.classList.remove('filter-btn-selected')
     }
-}
-
-function onXiaomiClicked() {
-    const btn = document.querySelector('.xiaomi-btn')
-    if (btn.classList.contains('filter-btn-clicked') === false) {
-        btn.classList.add('filter-btn-clicked')
+    
+    if (btn.classList.contains('filter-btn-selected') === false) {
+        btn.classList.add('filter-btn-selected')
+        brandSelected = brandName
     } else {
-        btn.classList.remove('filter-btn-clicked')
+        btn.classList.remove('filter-btn-selected')
     }
 }
