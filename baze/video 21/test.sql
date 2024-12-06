@@ -1,1 +1,0 @@
-ver 8 prog za web 2
